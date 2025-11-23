@@ -9,21 +9,22 @@
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
+    <main>
         <h1>Git Tutorial Notes</h1>
+        <p>My notes on Git and Github from a video by Dave Gray</p>
         <nav>
             <ul>
-                <a href="#">Home</a><br>
-                <a href="#Part1">Part 1</a><br>
-                <a href="#Part2">Part 2</a><br>
-                <a href="#Part3">Part 3</a><br>
+                <li><a href="#Part1">Part 1: Git and Github Basics</a></li>
+                <li><a href="#Part2">Part 2: Undoing Commits and Branch Management</a></li>
+                <li><a href="#Part3">Part 3: Continuous Deployment with Netlify</a></li>
             </ul>
         </nav>
-    </header>
-
-    <main>
         <section>
+            
             <h2 id="Part1">Tutorial for Git and Github</h2>
+            <p>This a a great video to get started on Git and Github. The author, uses Visual Studio Code as the editor for this. </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/6KoBsJfYBPM" title="Git and Github Tutorial Part 1 by Dave Gray</a></p>
+            <h3>Commands for local Git" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <p><a href="https://www.youtube.com/watch?v=6KoBsJfYBPM&list=PL0Zuz27SZ-6PkWWk_mA2vkimUTJf81mNz">Git and Github Tutorial Part 1 by Dave Gray</a></p>
             <h3>Commands for local Git</h3>
             <code><p>git init</p>
@@ -32,7 +33,7 @@
             <p>git commit -m "message"</p></code>
             <h3>Commands for Github</h3>
             <code><p>git remote add origin [repository URL]</p>
-            <p>git push -u origin main</p></section></code>
+            <p>git push -u origin main</p></code>
             <h3>Set up user information for Git</h3>
             <p>You might get the error: "src refspec main does not match any". In this case, you need to use git config to set your user information.</p>
             <p>git config --global user.name "Your Name"</p>
@@ -57,7 +58,10 @@ nothing to commit, working tree clean</code></p>
 </section>
 
 <section>
+    
     <h2 id="Part2"> Part 2 of series: </h2>
+    <p>Part2 gets into how to navigate git bash commands and how to manage branches.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/EGooeHH3hDY" title="Git Tutorial: How to Undo Git Commits, Rename a Git Branch and Checkout a Previous Commit By Dave Gray" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     <p><a href= "https://www.youtube.com/watch?v=EGooeHH3hDY&list=PL0Zuz27SZ-6PkWWk_mA2vkimUTJf81mNz&index=2">Git Tutorial: How to Undo Git Commits, Rename a Git Branch and Checkout a Previous Commit By Dave Gray</a></p>
     <p>Use <code>git status</code> to check status</p>
     <p>If a file has been "staged" after doing git add, it will show up in the "Changes to be committed" section of git status.</p>
@@ -98,20 +102,22 @@ nothing to commit, working tree clean</code></p>
 
 </section>
 <section>
-<h2 id="Part3"> Part 3 of series: </h2>
-<p><a href="https://www.youtube.com/watch?v=1h9p3q0b11I&list=PL0Zuz27SZ-6PkWWk_mA2vkimUTJf81mNz&index=3"><h3>Add Continuous Deploment to Your Project using git, Github adn Netlify</h3></a></p>
+
+    <h2 id="Part3"> Part 3 of series: </h2>
+    <p>This part gets into continuous deployment with Netlify.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/1h9p3q0b11I" title="Add Continuous Deployment to Your Project using git, Github adn Netlify" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p><a href="https://www.youtube.com/watch?v=1h9p3q0b11I&list=PL0Zuz27SZ-6PkWWk_mA2vkimUTJf81mNz&index=3"><h3>Add Continuous Deployment to Your Project using git, Github adn Netlify</h3></a></p>
 <p>Netlify is beyond what I need right now so I will skip the notes for that and come back when I need.</p>
-    </main>
 </section>
     <footer>
         <h2>References</h2>
         <p>Gray, D. (n.d.). Learn Git and GitHub Basics for Beginners | Quick Start Guide. YouTube. https://www.youtube.com/watch?v=6KoBsJfYBPM&list=PL0Zuz27SZ-6PkWWk_mA2vkimUTJf81mNz&index=1 </p>
-        <p>&copy; <span id="year"></span> Github for Beginners Project</p>
+        <p>2025 Github for Beginners Project - To teach myself Git and Github basics along with satisfying the requirements for FreeCodeCamp's Responsive Web Design Certification requirements.</p>
     </footer>
 
-    <script>
-        // set current year
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+</main>
+
+
+
 </body>
 </html>
