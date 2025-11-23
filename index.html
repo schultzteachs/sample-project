@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <h1>TEST Project</h1>
+        <h1>Git Tutorial Notes</h1>
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
@@ -21,20 +21,18 @@
 
     <main>
         <section>
-            <p>https://www.youtube.com/watch?v=6KoBsJfYBPM&list=PL0Zuz27SZ-6PkWWk_mA2vkimUTJf81mNz </p>
             <h2>Tutorial for Git and Github</h2>
+            <p><a href="https://www.youtube.com/watch?v=6KoBsJfYBPM&list=PL0Zuz27SZ-6PkWWk_mA2vkimUTJf81mNz">Git and Github Tutorial Part 1 by Dave Gray</a></p>
             <h3>Commands for local Git</h3>
-            <p>git init</p>
+            <code><p>git init</p>
             <p>git status</p>
             <p>git add .</p>
-            <p>git commit -m "message"</p>
-
+            <p>git commit -m "message"</p></code>
             <h3>Commands for Github</h3>
-            <p>git remote add origin [repository URL]</p>
-            <p>git push -u origin main</p>
+            <code><p>git remote add origin [repository URL]</p>
+            <p>git push -u origin main</p></section></code>
             <h3>Set up user information for Git</h3>
             <p>You might get the error: "src refspec main does not match any". In this case, you need to use git config to set your user information.</p>
-                
             <p>git config --global user.name "Your Name"</p>
             <p>git config --global user.email "you@example.com"</p>
             <p>Then try committing and pushing again.</p>
@@ -42,59 +40,71 @@
             <p>git push (pushes local commits to Github)</p> 
 
 
-            <h2>Workflow generally is:</h2>
-            <p>git add . (stages all changes)</p>
-            <p>git commit -m "message" (commits staged changes with a message)</p>
-            <p>git push (pushes local commits to Github)</p>
-            <p>git status (shows the status of changes)</p>
+            <h3>Workflow generally is:</h3>
+            <code> git add . </code><p>(stages all changes)</p>
+            <code>git commit -m "comment message"</code><p> (commits staged changes with a message)</p>
+            <code>git push</code><p> (pushes local commits to Github)</p>
+            <code>git status</code><p> (shows the status of changes)</p>
 
             <p> You should get something that looks like this:</p>
-            <p> $ git status
+            <p><code>$ git status
 On branch main
 Your branch is up to date with 'origin/main'.
 
-nothing to commit, working tree clean</p>
+nothing to commit, working tree clean</code></p>
 </section>
 
 <section>
-    <h2> Part 2 of series: </h2>
+    <h3> Part 2 of series: </h3>
     <p><a href= "https://www.youtube.com/watch?v=EGooeHH3hDY&list=PL0Zuz27SZ-6PkWWk_mA2vkimUTJf81mNz&index=2">Part 2</a></p>
-    <p>Use git status to check status</p>
+    <p>Use <code>git status</code> to check status</p>
     <p>If a file has been "staged" after doing git add, it will show up in the "Changes to be committed" section of git status.</p>
-    <p>If you need to unstage a file, you use git restore to unstage a file</p>
+    <p>If you need to unstage a file, you use <code>git restore</code> to unstage a file</p>
 
-    <p>Use git log and the git log --oneline command to view commit history</p>
+    <p>Use <code></code>git log</code> and the <code>git log --oneline</code> command to view commit history</p>
 
-    <p>If a comment needs to be edited, use git commit -v --amend</p>
+    <p>If a comment needs to be edited, use <code>git commit -v --amend</code></p>
     <p>This will open up a text editor with the previous commit message, allowing you to make changes.
     <p>When done with that comment edit, use ":wq" to save and exit the editor.</p>
 
     <h2>Manipulating Branches</h2>
-    <p>Use git branch --list</p>
-    <p>Use git branch [branch-name] to create a new branch</p>
-    <p>Use git checkout [branch-name] to switch to that branch</p>
-    <p>Use git merge [branch-name] to merge that branch into the current branch</p>
+    <p>Use <code>git branch --list</code> to create a new branch</p>
+    <p>Use <code>git checkout [branch-name]</code> to switch to that branch</p>
+    <p>Use <code>git merge [branch-name]</code> to merge that branch into the current branch</p>
     <p>Example, to get a new branch merged into the master branch, you would use git checkout master followed by git merge [branch-name]</p>
-    <p>Use git branch -d [branch-name] to delete a branch</p>
+    <p>Use <code>git branch -d [branch-name]</code> to delete a branch</p>
     <p>Make sure you are checked out to the branch you want to delete before deleting it.</p>
-    <p>Use git branch -m [old-branch-name] [new-branch-name] to rename a branch</p>
+    <p>Use <code>git branch -m [old-branch-name] [new-branch-name]</code> to rename a branch</p>
 
     <h2>Reviewing Changes and Branching from those</h2>
-    <p>git log --oneline </p>
-    <p>git checkout "short ID"</p>
+    <p><code>git log --oneline </code></p>
+    <p><code>git checkout "short ID"</code></p>
     <p>This puts you in a "detached HEAD" state, meaning you are not on any branch.</p>
-    <p>To create a new branch from this state, use git checkout -b [new-branch-name]</p>
+    <p>To create a new branch from this state, use <code>git checkout -b [new-branch-name]</code></p>
     <p>Then you can make changes and commit them to this new branch.</p>
 
+    <h3>
+        Reverting Changes
+    </h3>
+    <p>To revert changes from a specific commit, use <code>git revert [commit-ID]</code></p>
+    <p>This will create a new commit that undoes the changes from the specified commit.</p>
+
+    <h3>Reseting Changes</h3>
+    <p>To reset to a specific commit, use <code>git reset --hard [commit-ID]</code></p>
+    <p>This will move the HEAD to the specified commit and discard all changes after that commit</p>
+    <p>This is more destructive than git revert, as it changes the commit history.</p>
 
 </section>
-<h3> Part 3 of series: </h3>
-<p><a href="https://www.youtube.com/watch?v=1h9p3q0b11I&list=PL0Zuz27SZ-6PkWWk_mA2vkimUTJf81mNz&index=3">Part 3</a></p>
-
+<section>
+<h2> Part 3 of series: </h2>
+<p><a href="https://www.youtube.com/watch?v=1h9p3q0b11I&list=PL0Zuz27SZ-6PkWWk_mA2vkimUTJf81mNz&index=3"><h3>Add Continuous Deploment to Your Project using git, Github adn Netlify</h3></a></p>
+<p>Netlify is beyond what I need right now so I will skip the notes for that and come back when I need.</p>
     </main>
-
+</section>
     <footer>
-        <p>&copy; <span id="year"></span> TEST Project</p>
+        <h2>References</h2>
+        <p>Gray, D. (n.d.). Learn Git and GitHub Basics for Beginners | Quick Start Guide. YouTube. https://www.youtube.com/watch?v=6KoBsJfYBPM&list=PL0Zuz27SZ-6PkWWk_mA2vkimUTJf81mNz&index=1 </p>
+        <p>&copy; <span id="year"></span> Github for Beginners Project</p>
     </footer>
 
     <script>
