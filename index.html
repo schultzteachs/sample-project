@@ -59,6 +59,33 @@ nothing to commit, working tree clean</p>
 <section>
     <h2> Part 2 of series: </h2>
     <p><a href= "https://www.youtube.com/watch?v=EGooeHH3hDY&list=PL0Zuz27SZ-6PkWWk_mA2vkimUTJf81mNz&index=2">Part 2</a></p>
+    <p>Use git status to check status</p>
+    <p>If a file has been "staged" after doing git add, it will show up in the "Changes to be committed" section of git status.</p>
+    <p>If you need to unstage a file, you use git restore to unstage a file</p>
+
+    <p>Use git log and the git log --oneline command to view commit history</p>
+
+    <p>If a comment needs to be edited, use git commit -v --amend</p>
+    <p>This will open up a text editor with the previous commit message, allowing you to make changes.
+    <p>When done with that comment edit, use ":wq" to save and exit the editor.</p>
+
+    <h2>Manipulating Branches</h2>
+    <p>Use git branch --list</p>
+    <p>Use git branch [branch-name] to create a new branch</p>
+    <p>Use git checkout [branch-name] to switch to that branch</p>
+    <p>Use git merge [branch-name] to merge that branch into the current branch</p>
+    <p>Example, to get a new branch merged into the master branch, you would use git checkout master followed by git merge [branch-name]</p>
+    <p>Use git branch -d [branch-name] to delete a branch</p>
+    <p>Make sure you are checked out to the branch you want to delete before deleting it.</p>
+    <p>Use git branch -m [old-branch-name] [new-branch-name] to rename a branch</p>
+
+    <h2>Reviewing Changes and Branching from those</h2>
+    <p>git log --oneline </p>
+    <p>git checkout "short ID"</p>
+    <p>This puts you in a "detached HEAD" state, meaning you are not on any branch.</p>
+    <p>To create a new branch from this state, use git checkout -b [new-branch-name]</p>
+    <p>Then you can make changes and commit them to this new branch.</p>
+
 
 </section>
 <h3> Part 3 of series: </h3>
