@@ -13,15 +13,17 @@
         <h1>Git Tutorial Notes</h1>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="/page2.html">page2</a></li>
+                <a href="#">Home</a><br>
+                <a href="#Part1">Part 1</a><br>
+                <a href="#Part2">Part 2</a><br>
+                <a href="#Part3">Part 3</a><br>
             </ul>
         </nav>
     </header>
 
     <main>
         <section>
-            <h2>Tutorial for Git and Github</h2>
+            <h2 id="Part1">Tutorial for Git and Github</h2>
             <p><a href="https://www.youtube.com/watch?v=6KoBsJfYBPM&list=PL0Zuz27SZ-6PkWWk_mA2vkimUTJf81mNz">Git and Github Tutorial Part 1 by Dave Gray</a></p>
             <h3>Commands for local Git</h3>
             <code><p>git init</p>
@@ -55,8 +57,8 @@ nothing to commit, working tree clean</code></p>
 </section>
 
 <section>
-    <h3> Part 2 of series: </h3>
-    <p><a href= "https://www.youtube.com/watch?v=EGooeHH3hDY&list=PL0Zuz27SZ-6PkWWk_mA2vkimUTJf81mNz&index=2">Part 2</a></p>
+    <h2 id="Part2"> Part 2 of series: </h2>
+    <p><a href= "https://www.youtube.com/watch?v=EGooeHH3hDY&list=PL0Zuz27SZ-6PkWWk_mA2vkimUTJf81mNz&index=2">Git Tutorial: How to Undo Git Commits, Rename a Git Branch and Checkout a Previous Commit By Dave Gray</a></p>
     <p>Use <code>git status</code> to check status</p>
     <p>If a file has been "staged" after doing git add, it will show up in the "Changes to be committed" section of git status.</p>
     <p>If you need to unstage a file, you use <code>git restore</code> to unstage a file</p>
@@ -96,7 +98,7 @@ nothing to commit, working tree clean</code></p>
 
 </section>
 <section>
-<h2> Part 3 of series: </h2>
+<h2 id="Part3"> Part 3 of series: </h2>
 <p><a href="https://www.youtube.com/watch?v=1h9p3q0b11I&list=PL0Zuz27SZ-6PkWWk_mA2vkimUTJf81mNz&index=3"><h3>Add Continuous Deploment to Your Project using git, Github adn Netlify</h3></a></p>
 <p>Netlify is beyond what I need right now so I will skip the notes for that and come back when I need.</p>
     </main>
